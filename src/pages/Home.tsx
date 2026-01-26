@@ -9,7 +9,7 @@ export default function Home() {
           <div className="text-center space-y-8">
             <div className="space-y-4">
               <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight text-gray-900">
-                JANE DOE
+                SIMON MBURU
               </h1>
               <p className="text-xl sm:text-2xl lg:text-3xl text-gray-600 font-light tracking-wide">
                 Graphic Designer & Visual Storyteller

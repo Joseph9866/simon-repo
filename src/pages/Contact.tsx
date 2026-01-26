@@ -1,6 +1,12 @@
 import { useState } from 'react';
 import { Mail, Phone, MapPin, Send, Instagram, Linkedin, Dribbble, CheckCircle } from 'lucide-react';
-import { supabase, ContactSubmission } from '../lib/supabase';
+
+interface ContactSubmission {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+}
 
 export default function Contact() {
   const [formData, setFormData] = useState<ContactSubmission>({
@@ -26,11 +32,9 @@ export default function Contact() {
     setError(null);
 
     try {
-      const { error: submitError } = await supabase
-        .from('contact_submissions')
-        .insert([formData]);
-
-      if (submitError) throw submitError;
+      // Simulate form submission (frontend only)
+      console.log('Form submitted:', formData);
+      await new Promise(resolve => setTimeout(resolve, 1000)); // Simulate delay
 
       setSubmitted(true);
       setFormData({
@@ -73,10 +77,10 @@ export default function Contact() {
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
                       <a
-                        href="mailto:hello@janedoe.com"
+                        href="mailto:mburusimonchege@gmail.com"
                         className="text-gray-600 hover:text-gray-900 transition-colors"
                       >
-                        hello@janedoe.com
+                        mburusimonchege@gmail.com
                       </a>
                     </div>
                   </div>
@@ -88,10 +92,10 @@ export default function Contact() {
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-1">Phone</h3>
                       <a
-                        href="tel:+15551234567"
+                        href="tel:+254701249067"
                         className="text-gray-600 hover:text-gray-900 transition-colors"
                       >
-                        (555) 123-4567
+                        +254 701 249067
                       </a>
                     </div>
                   </div>
@@ -103,7 +107,7 @@ export default function Contact() {
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-1">Location</h3>
                       <p className="text-gray-600">
-                        New York, NY<br />
+                        Nairobi, Kenya<br />
                         Available for remote work
                       </p>
                     </div>
