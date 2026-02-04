@@ -71,10 +71,10 @@ export default function About() {
               </div>
             </div>
 
-            <div className="order-1 lg:order-2">
-              <div className="aspect-square bg-gray-300 rounded-2xl overflow-hidden">
+            <div className="order-1 lg:order-2 flex justify-center">
+              <div className="bg-black rounded-2xl overflow-hidden max-w-md w-full">
                 <img
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80"
+                  src="/simonpic.jpeg"
                   alt="Simon Mburu"
                   className="w-full h-full object-cover"
                 />
